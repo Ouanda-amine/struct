@@ -34,7 +34,8 @@ void createPer(){
     printf("entrez le codepostale : ");
     scanf("%s",per->adresse->codepostale);
 
-   lespersonnes[ nombresPersonnes++] = *per;
+   lespersonnes[nombresPersonnes] = *per;
+   nombresPersonnes++;
 
 
 }
@@ -101,13 +102,13 @@ int main(){
               case 3:
                     {
                     int monchoix;
-                    char nv[100];
+                    char new[100];
                     printf("poure mise a jour le : 1 nom , 2 age , 3 ville , 4 rue , 5 code postal :");
                     scanf("%d",&monchoix);
 
                     printf("Entrer la nouvelle valeur : ");
-                    scanf("%s",nv);
-                    modifier(&per,monchoix,nv);
+                    scanf("%s",new);
+                    modifier(&per,monchoix,new);
 
                     printf("pour creer entrer 1 pour afficher entrer 2 pour mise_a_jour entrer 3 pour  delete enter 4 pour exist entrer 0: ");
                     scanf("%d", &choix);
